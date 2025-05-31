@@ -2,19 +2,20 @@
   "name": "ultradense-forge",
   "version": "0.0.1",
   "title": "Ultradense Forge",
-  "author": "rustynova016",
+  "author": "RustyNova016",
   "homepage": "[HOMEPAGE/REPO URL]",
   "description": "[SHORT DESCRIPTION]",
   "factorio_version": "2.0",
   "dependencies": [
     "base",
     "space-age >= 2.0.47",
-    "PlanetsLib >= 1.5.0"
+    "PlanetsLib >= 1.5.0",
+    "galore_lib >= 1.6.0"
   ],
   "quality_required": false,
-  "rail_bridges_required": false,
-  "space_travel_required": false,
-  "spoiling_required": false,
+  "rail_bridges_required": true,
+  "space_travel_required": true,
+  "spoiling_required": true,
   "freezing_required": false,
   "segmented_units_required": false,
   "expansion_shaders_required": false

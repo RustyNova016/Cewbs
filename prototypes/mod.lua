@@ -1,2 +1,7 @@
+require("prototypes.cubes.mod")
+require("prototypes.categories")
+require("prototypes.fluids.mod")
+require("prototypes.intermediary_items.mod")
+require("prototypes.plants.mod")
 require("prototypes.planet.mod")
 require("prototypes.entities.mod")
