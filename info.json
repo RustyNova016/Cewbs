@@ -10,7 +10,8 @@
     "base",
     "space-age >= 2.0.47",
     "PlanetsLib >= 1.5.0",
-    "galore_lib >= 1.6.0"
+    "galore_lib >= 1.6.0",
+    "novus-lib >= 0.0.1"
   ],
   "quality_required": false,
   "rail_bridges_required": true,

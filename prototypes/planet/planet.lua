@@ -10,9 +10,9 @@ PlanetsLib:extend(
     {
       type = "planet",
       name = "udforge",
-      icon = "__ultradense-forge__/graphics/icons/cubium.png",
-      starmap_icon = "__ultradense-forge__/graphics/icons/starmap-cubium.png",
-      starmap_icon_size = 512,
+      icon = lib.icon("test"),
+      starmap_icon = lib.icon("test"),
+      starmap_icon_size = 64,
       orbit = {
         parent = {
           type = "space-location",
@@ -22,7 +22,7 @@ PlanetsLib:extend(
         orientation = 0.75,
         sprite = {
           type = "sprite",
-          filename = "__ultradense-forge__/graphics/icons/cubium.png",
+          filename = lib.icon("test"),
           size = 64,
           scale = 5,
         },
@@ -51,9 +51,9 @@ PlanetsLib:extend(
       {
         ["day-night-cycle"] = 10 * minute,
         ["magnetic-field"] = 25,
-        ["solar-power"] = 200,
-        pressure = 1500,
-        gravity = 40
+        ["solar-power"] = 2,
+        pressure = 1000,
+        gravity = 999999
       },
       asteroid_spawn_influence = 1,
       asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus, 0.9),

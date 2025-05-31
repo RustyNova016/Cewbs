@@ -3,7 +3,7 @@ data:extend({
     {
         type = "item",
         name = "cube-core",
-        stack_size = 10,
+        stack_size = 50,
         icon = lib.icon("test"),
         subgroup = "udforge-intermediaries",
         order = "a",

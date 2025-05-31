@@ -13,14 +13,14 @@ data:extend({
     },
     {
         type = "item-subgroup",
-        name = "intermediaries",
-        group = "void-processing",
+        name = "udforge-intermediaries",
+        group = "udforge",
         order = "b"
     },
         {
         type = "item-subgroup",
-        name = "basic-cubes",
-        group = "void-processing",
+        name = "udforge-basic-cubes",
+        group = "udforge",
         order = "c"
     },
 })

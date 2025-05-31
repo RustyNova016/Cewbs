@@ -5,7 +5,7 @@ data:extend({
         name = "cube-matter",
         stack_size = 50,
         icon = lib.icon("test"),
-        subgroup = "intermediaries",
+        subgroup = "udforge-intermediaries",
         order = "a",
     },
 })

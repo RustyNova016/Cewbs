@@ -1,0 +1,1 @@
+require("prototypes.buildings.forge-roboport")

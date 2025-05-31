@@ -2,7 +2,7 @@ data:extend({
     {
         type = "fluid",
         name = "ud-coreflux",
-        icon = lib.icon("fluid/semi-destabilized-void"),
+        icon = lib.icon("test"),
         subgroup = "fluid",
         order = "d[udf]-a[main]-a[coreflux]",
         default_temperature = 15,
