@@ -2,18 +2,14 @@ local item_sounds = require("__base__.prototypes.item_sounds")
 
 local base_cube = {
     type = "item",
-    subgroup = "cubic",
+    subgroup = "udforge-basic-cubes",
+    icon = lib.icon("test"),
     inventory_move_sound = item_sounds.resource_inventory_move,
     pick_sound = item_sounds.resource_inventory_pickup,
     drop_sound = item_sounds.resource_inventory_move,
     stack_size = 1,
     default_import_location = "udforge",
     weight = 999999999 * kg,
-    fuel_category = "cewbs-cube",
-    fuel_value = "1MJ",
-    burnt_result = "dormant-microcube",
-    fuel_acceleration_multiplier = 1.5,
-    fuel_top_speed_multiplier = 4.5,
     auto_recycle = false,
 }
 
@@ -27,11 +23,32 @@ function create_energized_cube(tier, type, order, fuel)
     return util.merge({
         base_cube,
         {
-            name = "energized-" .. type .. "-" .. tier[1] .. "-cube",
-            subgroup = "udforge-" .. type,
-            order = tier[0],
-            fuel_value = 9 ^ tier .. "KJ",
-            burnt_result = "dormant-" .. type .. "-" .. tier[1] .. "-cube",
+            name = "energized-" .. type .. "-" .. tier[2] .. "-cube",
+            icon = lib.icon("cubes/energized-" .. type .. "-" .. tier[2] .. "-cube"),
+            --subgroup = "udforge-" .. type,
+            order = "a-" .. tier[1],
+            fuel_category = "udforge-cube",
+            fuel_value = 9 ^ tier[1] .. "MJ",
+            fuel_acceleration_multiplier = 1.5,
+            fuel_top_speed_multiplier = 4.5,
+            burnt_result = "dormant-" .. type .. "-" .. tier[2] .. "-cube",
         }
     })
 end
+
+function create_dormant_cube(tier, type)
+    return util.merge({
+        base_cube,
+        {
+            name = "dormant-" .. type .. "-" .. tier[2] .. "-cube",
+            icon = lib.icon("cubes/dormant-" .. type .. "-" .. tier[2] .. "-cube"),
+            --subgroup = "udforge-" .. type,
+            order = "b-" .. tier[1],
+        }
+    })
+end
+
+data:extend({
+    create_energized_cube({1, ""}, "", "a", ""),
+    create_dormant_cube({ 1, "" }, "")
+})

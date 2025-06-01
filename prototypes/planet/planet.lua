@@ -53,7 +53,7 @@ PlanetsLib:extend(
         ["magnetic-field"] = 25,
         ["solar-power"] = 2,
         pressure = 1000,
-        gravity = 999999
+        gravity = 99
       },
       asteroid_spawn_influence = 1,
       asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus, 0.9),

@@ -331,7 +331,7 @@ data:extend({
         {
             probability_expression = "udforge_core_flux == 1"
         },
-        effect = "lava",
+        effect = "udf-core-flux",
         --fluid = "lava",
         effect_color = { 167, 59, 27 },
         effect_color_secondary = { 49, 80, 14 },
@@ -361,5 +361,46 @@ data:extend({
         --absorptions_per_second = tile_pollution.lava,
         default_cover_tile = "foundation",
         ambient_sounds = tile_sounds.ambient.magma,
+    },
+    {
+        type = "tile-effect",
+        name = "udf-core-flux",
+        shader = "water",
+        water =
+        {
+            shader_variation = "lava",
+            textures =
+            {
+                {
+                    filename = "__space-age__/graphics/terrain/vulcanus/lava-textures/lava-noise-texture.png",
+                    width = 512,
+                    height = 512
+                },
+                {
+                    filename = "__ultradense-forge__/graphics/terrain/core-flux-effect.png",
+                    width = 512 * 4,
+                    height = 512 * 2
+                }
+            },
+            texture_variations_columns = 1,
+            texture_variations_rows = 1,
+            secondary_texture_variations_columns = 4,
+            secondary_texture_variations_rows = 2,
+
+            animation_speed = 1.5,
+            animation_scale = { 0.75, 0.75 },
+            tick_scale = 1,
+
+            specular_lightness = { 30, 48, 22 },
+            foam_color = { 73, 5, 5 },
+            foam_color_multiplier = 1,
+
+            dark_threshold = { 0.755, 0.755 },
+            reflection_threshold = { 1, 1 },
+            specular_threshold = { 0.889, 0.291 },
+
+            near_zoom = 1 / 16,
+            far_zoom = 1 / 16
+        }
     }
 })
