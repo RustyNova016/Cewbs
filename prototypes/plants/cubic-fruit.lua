@@ -28,11 +28,12 @@ data:extend({
         enabled = true,
         allow_productivity = true,
         energy_required = 1,
-        ingredients = { { type = "item", name = "cubic-fruit", amount = 1 } },
+        ingredients = { { type = "item", name = "cubic-fruit", amount = 10 } },
         results =
         {
             { type = "item", name = "cubic-seed", amount = 1, ignored_by_productivity = 1 }, -- TODO: Set ammounts to the yeild of the tree to prevent seed dups
-            { type = "item", name = "cube-core",  amount = 1 }
+            { type = "item", name = "cube-core",  amount = 10 },
+            { type = "item", name = "cube-jelly", amount = 10 }
         },
     },
 })

@@ -21,4 +21,17 @@ data:extend({
         results = { { type = "fluid", name = "water", amount = 100 } },
         main_product = "water"
     },
+
+    {
+        type = "recipe",
+        name = "matter-jellification",
+        category = "cube-crafting",
+        energy_required = 10,
+        --enabled = false,
+        ingredients = {
+            { type = "item", name = "cube-matter", amount = 10 },
+        },
+        results = { { type = "item", name = "cube-jelly", amount = 5 } },
+        main_product = "cube-jelly"
+    },
 })

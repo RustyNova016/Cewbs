@@ -12,14 +12,14 @@ data:extend({
     {
         type = "recipe",
         name = "undimensional-widget",
+        category = "cubic-crafter",
         energy_required = 10,
         --enabled = false,
         ingredients = {
-            { type = "item", name = "cube-matter", amount = 20 },
-            { type = "item", name = "iron-gear-wheel",       amount = 3 },
+            { type = "item", name = "cube-matter",     amount = 20 },
+            { type = "item", name = "iron-gear-wheel", amount = 3 },
         },
         results = { { type = "item", name = "undimensional-widget", amount = 1 } },
         main_product = "undimensional-widget"
     },
 })
-

@@ -88,12 +88,6 @@ end
 --     return gloabals.mod_prefix .. "-" .. name
 -- end
 
-utils.energized_cube_name = function(type, tier)
-    return "energized-" .. type .. "-" .. tier .. "-cube"
-end
 
-utils.dormant_cube_name = function(type, tier)
-    return "dormant-" .. type .. "-" .. tier .. "-cube"
-end
 
 return utils

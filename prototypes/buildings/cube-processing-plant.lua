@@ -15,6 +15,7 @@ data:extend({
         ingredients = {
             { type = "item", name = "undimensional-widget",       amount = 5 },
             { type = "item", name = "cube-matter",          amount = 100 },
+            
         },
         results = { { type = "item", name = "cube-processing-plant", amount = 1 } },
     },

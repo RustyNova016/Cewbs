@@ -19,12 +19,12 @@ local cube_types = { "", "inverted", "evil" }
 ---Create an energized cube item
 ---@param tier [number, string]
 ---@return data.ItemPrototype
-function create_energized_cube(tier, type, order, fuel)
+function create_energized_cube(tier, type)
     return util.merge({
         base_cube,
         {
-            name = "energized-" .. type .. "-" .. tier[2] .. "-cube",
-            icon = lib.icon("cubes/energized-" .. type .. "-" .. tier[2] .. "-cube"),
+            name = lib.energized_cube_name(tier[2], type),
+            icon = lib.icon("cubes/" .. lib.energized_cube_name(tier[2], type)),
             --subgroup = "udforge-" .. type,
             order = "a-" .. tier[1],
             fuel_category = "udforge-cube",
@@ -48,7 +48,14 @@ function create_dormant_cube(tier, type)
     })
 end
 
+function create_cube_pair(tier, type)
+    return {
+        create_energized_cube(tier, type),
+        create_dormant_cube(tier, type)
+    }
+end
+
 data:extend({
-    create_energized_cube({1, ""}, "", "a", ""),
-    create_dormant_cube({ 1, "" }, "")
+    create_cube_pair({ 1, "" }, ""),
+    --create_cube_pair({ 4, "hyper" }, ""),
 })

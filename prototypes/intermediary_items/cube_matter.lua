@@ -12,7 +12,7 @@ data:extend({
     {
         type = "recipe",
         name = "cube-matter",
-        category = "chemistry",
+        category = "cubic-crafter",
         energy_required = 10,
         --enabled = false,
         ingredients = {
@@ -23,6 +23,6 @@ data:extend({
             { type = "item", name = lib.dormant_cube_name("", ""), amount = 1 },
         },
         main_product = "cube-matter",
-        aut
+        
     },
 })
