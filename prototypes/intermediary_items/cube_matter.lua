@@ -12,17 +12,17 @@ data:extend({
     {
         type = "recipe",
         name = "cube-matter",
-        category = "cubic-crafter",
+        category = "cubic-crafting",
         energy_required = 10,
         --enabled = false,
         ingredients = {
-            { type = "item", name = lib.energized_cube_name("",""), amount = 1 },
+            { type = "item", name = cube_lib.energized_cube_name("", ""), amount = 1 },
         },
-        results = { 
-            { type = "item", name = "cube-matter", amount = 50 } ,
-            { type = "item", name = lib.dormant_cube_name("", ""), amount = 1 },
+        results = {
+            { type = "item", name = "cube-matter",                      amount = 50 },
+            { type = "item", name = cube_lib.dormant_cube_name("", ""), amount = 1 },
         },
         main_product = "cube-matter",
-        
+
     },
 })

@@ -12,7 +12,7 @@ data:extend({
     {
         type = "recipe",
         name = "undimensional-widget",
-        category = "cubic-crafter",
+        category = "cubic-crafting",
         energy_required = 10,
         --enabled = false,
         ingredients = {

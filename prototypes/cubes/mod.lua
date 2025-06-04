@@ -1,3 +1,5 @@
+require("prototypes.cubes.basic-cube")
+
 local item_sounds = require("__base__.prototypes.item_sounds")
 
 local base_cube = {
@@ -23,8 +25,8 @@ function create_energized_cube(tier, type)
     return util.merge({
         base_cube,
         {
-            name = lib.energized_cube_name(tier[2], type),
-            icon = lib.icon("cubes/" .. lib.energized_cube_name(tier[2], type)),
+            name = cube_lib.energized_cube_name(tier[2], type),
+            icon = lib.icon("cubes/" .. cube_lib.energized_cube_name(tier[2], type)),
             --subgroup = "udforge-" .. type,
             order = "a-" .. tier[1],
             fuel_category = "udforge-cube",
@@ -55,7 +57,7 @@ function create_cube_pair(tier, type)
     }
 end
 
-data:extend({
+data:extend(util.merge({
     create_cube_pair({ 1, "" }, ""),
     --create_cube_pair({ 4, "hyper" }, ""),
-})
+}))

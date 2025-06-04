@@ -11,7 +11,12 @@ data:extend({
 
     {
         type = "recipe-category",
-        name = "cubic-crafter",
+        name = "cubic-crafting",
+    },
+
+    {
+        type = "recipe-category",
+        name = "cube-recovery",
     },
 
     {

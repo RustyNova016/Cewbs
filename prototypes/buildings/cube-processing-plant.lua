@@ -13,9 +13,9 @@ data:extend({
         enabled = true,
         subgroup = "udforge-machines",
         ingredients = {
-            { type = "item", name = "undimensional-widget",       amount = 5 },
+            { type = "item", name = "undimensional-widget", amount = 5 },
             { type = "item", name = "cube-matter",          amount = 100 },
-            
+
         },
         results = { { type = "item", name = "cube-processing-plant", amount = 1 } },
     },
@@ -46,7 +46,7 @@ data:extend({
             { type = "fire",     percent = 70 },
             { type = "impact",   percent = 70 },
         },
-        crafting_categories = { "cubic-crafter" },
+        crafting_categories = { "cubic-crafting" },
         crafting_speed = 1.0,
         ingredient_count = 6,
         module_slots = 4,

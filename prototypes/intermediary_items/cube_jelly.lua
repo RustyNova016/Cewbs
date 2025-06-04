@@ -25,7 +25,7 @@ data:extend({
     {
         type = "recipe",
         name = "matter-jellification",
-        category = "cube-crafting",
+        category = "cubic-crafting",
         energy_required = 10,
         --enabled = false,
         ingredients = {
