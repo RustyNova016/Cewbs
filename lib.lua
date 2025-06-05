@@ -84,10 +84,9 @@ utils.rocket_stack_size = function(count)
     return 1000000 / count
 end
 
--- utils.prefix = function(name)
---     return gloabals.mod_prefix .. "-" .. name
--- end
-
+utils.prefix = function(name)
+    return "udf-" .. name
+end
 
 
 return utils

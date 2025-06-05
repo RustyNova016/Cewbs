@@ -2,7 +2,7 @@ data:extend({
     ---@type data.ItemPrototype
     {
         type = "item",
-        name = "cube-core",
+        name = lib.prefix("cube-core"),
         stack_size = 50,
         icon = lib.icon("test"),
         subgroup = "udforge-intermediaries",
