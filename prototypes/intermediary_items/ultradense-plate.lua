@@ -4,7 +4,7 @@ data:extend({
         type = "item",
         name = "ultradense-plate",
         stack_size = 50,
-        icon = lib.icon("test"),
+        icon = utils.icon("test"),
         subgroup = "udforge-intermediaries",
         order = "a",
     },
@@ -16,7 +16,7 @@ data:extend({
         energy_required = 10,
         --enabled = false,
         ingredients = {
-            { type = "fluid", name = "ud-coreflux",                   amount = 100 },
+            { type = "fluid", name = "ud-coreflux",                        amount = 100 },
             { type = "item",  name = cube_lib.energized_cube_name("", ""), amount = 1 }
         },
         results = {

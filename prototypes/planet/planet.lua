@@ -10,8 +10,8 @@ PlanetsLib:extend(
     {
       type = "planet",
       name = "udforge",
-      icon = lib.icon("test"),
-      starmap_icon = lib.icon("test"),
+      icon = utils.icon("test"),
+      starmap_icon = utils.icon("test"),
       starmap_icon_size = 64,
       orbit = {
         parent = {
@@ -22,7 +22,7 @@ PlanetsLib:extend(
         orientation = 0.75,
         sprite = {
           type = "sprite",
-          filename = lib.icon("test"),
+          filename = utils.icon("test"),
           size = 64,
           scale = 5,
         },

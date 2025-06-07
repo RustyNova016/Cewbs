@@ -4,7 +4,7 @@ data:extend({
         type = "item",
         name = "undimensional-widget",
         stack_size = 50,
-        icon = lib.icon("undimensional-widget"),
+        icon = utils.icon("undimensional-widget"),
         subgroup = "udforge-intermediaries",
         order = "a",
     },

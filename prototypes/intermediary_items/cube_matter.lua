@@ -4,7 +4,7 @@ data:extend({
         type = "item",
         name = "cube-matter",
         stack_size = 50,
-        icon = lib.icon("cubic-matter"),
+        icon = utils.icon("cubic-matter"),
         subgroup = "udforge-intermediaries",
         order = "a",
     },

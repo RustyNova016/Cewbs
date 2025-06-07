@@ -2,7 +2,7 @@ data:extend({
     {
         type = "furnace",
         name = "cube_sauna",
-        icon = lib.icon("test"),
+        icon = utils.icon("test"),
         flags = { "placeable-neutral" },
         icon_size = 64,
         selection_box = { { -1, -1 }, { 1, 1 } },

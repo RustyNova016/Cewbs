@@ -8,7 +8,7 @@ data:extend({
     {
         type = "assembling-machine",
         name = "forge-assembly-hatch",
-        icon = lib.icon("test"),
+        icon = utils.icon("test"),
         flags = { "placeable-neutral" },
         collision_box = { { -3.25, -3.25 }, { 3.25, 3.25 } },
         selection_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
@@ -109,7 +109,7 @@ data:extend({
                 rotate = false,
                 orientation_to_variation = false,
             },
-            working_visualisations = {{
+            working_visualisations = { {
                 animation = {
                     layers = {
                         {
@@ -134,7 +134,7 @@ data:extend({
                         },
                     },
                 },
-            }},
+            } },
         },
         icon_draw_specification = { scale = 2, shift = { 0, -0.3 } },
         icons_positioning = { { inventory_index = defines.inventory.assembling_machine_modules, shift = { 0, 1.25 } } },

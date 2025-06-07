@@ -2,7 +2,7 @@ data:extend({
     {
         type = "fluid",
         name = "forge-hivemind-gas",
-        icon = lib.icon("test"),
+        icon = utils.icon("test"),
         subgroup = "fluid",
         order = "d[udf]-a[main]-b[forge-hivemind-gas]",
         default_temperature = 15,

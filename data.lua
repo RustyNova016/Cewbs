@@ -1,4 +1,6 @@
-lib = require("lib")
+utils = require("lib")
 cube_lib = require("cube_lib")
+glob = require("globals")
 vgal = require("__galore_lib__.lib.vgal")
+lib = require("lib.mod")
 require("prototypes.mod")

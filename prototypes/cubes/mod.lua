@@ -5,7 +5,7 @@ local item_sounds = require("__base__.prototypes.item_sounds")
 local base_cube = {
     type = "item",
     subgroup = "udforge-basic-cubes",
-    icon = lib.icon("test"),
+    icon = utils.icon("test"),
     inventory_move_sound = item_sounds.resource_inventory_move,
     pick_sound = item_sounds.resource_inventory_pickup,
     drop_sound = item_sounds.resource_inventory_move,
@@ -26,7 +26,7 @@ function create_energized_cube(tier, type)
         base_cube,
         {
             name = cube_lib.energized_cube_name(tier[2], type),
-            icon = lib.icon("cubes/" .. cube_lib.energized_cube_name(tier[2], type)),
+            icon = utils.icon("cubes/" .. cube_lib.energized_cube_name(tier[2], type)),
             --subgroup = "udforge-" .. type,
             order = "a-" .. tier[1],
             fuel_category = "udforge-cube",
@@ -43,7 +43,7 @@ function create_dormant_cube(tier, type)
         base_cube,
         {
             name = "dormant-" .. type .. "-" .. tier[2] .. "-cube",
-            icon = lib.icon("cubes/dormant-" .. type .. "-" .. tier[2] .. "-cube"),
+            icon = utils.icon("cubes/dormant-" .. type .. "-" .. tier[2] .. "-cube"),
             --subgroup = "udforge-" .. type,
             order = "b-" .. tier[1],
         }

@@ -23,7 +23,7 @@ data:extend({
         type = "item-group",
         name = "udforge",
         order = "udforge",
-        icon = lib.icon("test"),
+        icon = utils.icon("test"),
         icon_size = 128,
     },
     {
@@ -38,7 +38,7 @@ data:extend({
         group = "udforge",
         order = "b"
     },
-        {
+    {
         type = "item-subgroup",
         name = "udforge-basic-cubes",
         group = "udforge",

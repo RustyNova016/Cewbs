@@ -2,7 +2,7 @@ data:extend({
     {
         type = "fluid",
         name = "udf-gel-e",
-        icon = lib.icon("test"),
+        icon = utils.icon("test"),
         subgroup = "fluid",
         order = "d[udf]-a[main]-a[coreflux]",
         default_temperature = 15,
@@ -22,10 +22,9 @@ data:extend({
             cube_lib.cube_ingredient("extra", "")
         },
         results = {
-            { type = "fluid", name = "udf-gel-e",                   amount = 50 },
+            { type = "fluid", name = "udf-gel-e", amount = 50 },
         },
         main_product = "cube-matter",
 
     }
 })
-

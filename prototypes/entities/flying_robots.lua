@@ -14,7 +14,7 @@ data:extend({
         data.raw["construction-robot"]["construction-robot"],
         {
             name = "construction-cube",
-            icon = lib.icon("construction-cube"),
+            icon = utils.icon("construction-cube"),
             speed = 0.03,
             max_energy = "100MJ",
             energy_per_tick = "0.01kJ",
@@ -40,8 +40,10 @@ data:extend({
         data.raw["item"]["construction-robot"],
         {
             name = "construction-cube",
-            icon = lib.icon("construction-cube"),
+            icon = utils.icon("construction-cube"),
             place_result = "construction-cube",
+            weight = utils.rocket_stack_size(25),
+            stack_size = 25
         }
     }),
 
@@ -49,7 +51,7 @@ data:extend({
     {
         type = "recipe",
         name = "construction-cube",
-        icon = lib.icon("construction-cube"),
+        icon = utils.icon("construction-cube"),
         energy_required = 30,
         --enabled = false,
         ingredients = {
