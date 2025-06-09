@@ -19,45 +19,47 @@ local cube_tiers = { "", "extra", "super", "hyper", "mega", "ultra" }
 local cube_types = { "", "inverted", "evil" }
 
 ---Create an energized cube item
----@param tier [number, string]
+---@param cube Cube
 ---@return data.ItemPrototype
-function create_energized_cube(tier, type)
+function create_energized_cube(cube)
     return util.merge({
         base_cube,
         {
-            name = cube_lib.energized_cube_name(tier[2], type),
-            icon = utils.icon("cubes/" .. cube_lib.energized_cube_name(tier[2], type)),
+            name = cube_lib.energized_cube_name(cube),
+            icon = utils.icon("cubes/" .. cube_lib.energized_cube_name(cube)),
             --subgroup = "udforge-" .. type,
-            order = "a-" .. tier[1],
+            order = "a-" .. cube.tier.tier,
             fuel_category = "udforge-cube",
-            fuel_value = 9 ^ tier[1] .. "MJ",
+            fuel_value = 9 ^ cube.tier.tier .. "MJ",
             fuel_acceleration_multiplier = 1.5,
             fuel_top_speed_multiplier = 4.5,
-            burnt_result = "dormant-" .. type .. "-" .. tier[2] .. "-cube",
+            burnt_result = cube_lib.dormant_cube_name(cube),
         }
     })
 end
 
-function create_dormant_cube(tier, type)
+function create_dormant_cube(cube)
     return util.merge({
         base_cube,
         {
-            name = "dormant-" .. type .. "-" .. tier[2] .. "-cube",
-            icon = utils.icon("cubes/dormant-" .. type .. "-" .. tier[2] .. "-cube"),
+            name = cube_lib.dormant_cube_name(cube),
+            icon = utils.icon("cubes/" .. cube_lib.dormant_cube_name(cube)),
             --subgroup = "udforge-" .. type,
-            order = "b-" .. tier[1],
+            order = "b-" .. cube.tier.tier,
         }
     })
 end
 
-function create_cube_pair(tier, type)
-    return {
-        create_energized_cube(tier, type),
-        create_dormant_cube(tier, type)
+function create_cube_pair(cube)
+    local a = {
+        create_energized_cube(cube),
+        create_dormant_cube(cube)
     }
+
+    return a
 end
 
-data:extend(util.merge({
-    create_cube_pair({ 1, "" }, ""),
-    --create_cube_pair({ 4, "hyper" }, ""),
-}))
+data:extend(create_cube_pair(glob.cubes.energized_dense_normal))
+data:extend(create_cube_pair(glob.cubes.energized_extra_normal))
+data:extend(create_cube_pair(glob.cubes.energized_super_normal))
+data:extend(create_cube_pair(glob.cubes.energized_hyper_normal))

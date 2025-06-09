@@ -326,13 +326,25 @@ data:extend({
         name = "udf-core-flux",
         order = "a-a",
         subgroup = "vulcanus-tiles",
-        collision_mask = tile_collision_masks.lava(),
+        collision_mask = {
+            layers = {
+                ground_tile = true,
+                water_tile = true,
+                item = true,
+                resource = true,
+                player = true,
+                doodad = true,
+                --object=true,
+                lava_tile = true,
+                rail = true -- to prevent rail supports from being buildable on lava, guarded by TEST(RailSupportOverTilesAssumptions)
+            }
+        },
         autoplace =
         {
             probability_expression = "udforge_core_flux == 1"
         },
         effect = "udf-core-flux",
-        --fluid = "lava",
+        fluid = "ud-coreflux",
         effect_color = { 167, 59, 27 },
         effect_color_secondary = { 49, 80, 14 },
         --particle_tints = tile_graphics.lava_particle_tints,

@@ -20,13 +20,18 @@ local cube_attr = {
         },
         ---@type CubeTier
         extra = {
-            tier = 1,
+            tier = 2,
             tier_name = "extra",
         },
         ---@type CubeTier
         super = {
-            tier = 1,
+            tier = 3,
             tier_name = "super",
+        },
+        ---@type CubeTier
+        hyper = {
+            tier = 4,
+            tier_name = "hyper",
         }
     },
     types = {
@@ -53,6 +58,39 @@ return {
         energized_dense_normal = {
             state = cube_attr.state.energized,
             tier = cube_attr.tiers.dense,
+            type = cube_attr.types.normal
+        },
+
+        dormant_extra_normal = {
+            state = cube_attr.state.dormant,
+            tier = cube_attr.tiers.extra,
+            type = cube_attr.types.normal
+        },
+        energized_extra_normal = {
+            state = cube_attr.state.energized,
+            tier = cube_attr.tiers.extra,
+            type = cube_attr.types.normal
+        },
+
+        dormant_super_normal = {
+            state = cube_attr.state.dormant,
+            tier = cube_attr.tiers.super,
+            type = cube_attr.types.normal
+        },
+        energized_super_normal = {
+            state = cube_attr.state.energized,
+            tier = cube_attr.tiers.super,
+            type = cube_attr.types.normal
+        },
+
+        dormant_hyper_normal = {
+            state = cube_attr.state.dormant,
+            tier = cube_attr.tiers.hyper,
+            type = cube_attr.types.normal
+        },
+        energized_hyper_normal = {
+            state = cube_attr.state.energized,
+            tier = cube_attr.tiers.hyper,
             type = cube_attr.types.normal
         },
     }

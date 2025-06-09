@@ -4,7 +4,7 @@ local Public = {}
 ---@param cube Cube
 ---@return string
 Public.cube_name = function(cube)
-    return cube.state .. "-" .. cube.type .. "-" .. cube.tier .. "-cube"
+    return cube.state .. "-" .. cube.type .. "-" .. cube.tier.tier_name .. "-cube"
 end
 
 ---Create the dormant version of a cube
@@ -31,20 +31,20 @@ Public.energized = function(cube)
     })
 end
 
-Public.energized_cube_name = function(tier, type)
-    return "energized-" .. tier .. "-" .. type .. "-cube"
+Public.energized_cube_name = function(cube)
+    return Public.cube_name(Public.energized(cube))
 end
 
-Public.dormant_cube_name = function(tier, type)
-    return "dormant-" .. tier .. "-" .. type .. "-cube"
+Public.dormant_cube_name = function(cube)
+    return Public.cube_name(Public.dormant(cube))
 end
 
-function Public.cube_ingredient(tier, type)
-    return { type = "item", name = utils.energized_cube_name(tier, type), amount = 1 }
+function Public.cube_ingredient(cube)
+    return { type = "item", name = Public.cube_name(Public.energized(cube)), amount = 1, ignored_by_stats = 1 }
 end
 
-function Public.cube_product(tier, type)
-    return { type = "item", name = utils.dormant_cube_name(tier, type), amount = 1 }
+function Public.cube_product(cube)
+    return { type = "item", name = Public.cube_name(Public.dormant(cube)), amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 }
 end
 
 Public.cubes = {

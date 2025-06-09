@@ -1,10 +1,10 @@
 data:extend({
     ---@type data.ItemPrototype
     {
-        type = "item",
+        type = "item", 
         name = utils.prefix("arcane-substrate"),
         stack_size = 50,
-        icon = utils.icon("cubic-jelly"),
+        icon = utils.icon("arcane-substrate"),
         subgroup = "udforge-intermediaries",
         order = "a",
     },
@@ -17,9 +17,9 @@ data:extend({
         --enabled = false,
         ingredients = {
             { type = "item", name = utils.prefix("ambiguous-filter"), amount = 1 },
-            { type = "item", name = "cube-jelly",                     amount = 10 },
+            { type = "fluid", name = "udf-gel-e",                      amount = 200 },
         },
-        results = { { type = "fluid", name = utils.prefix("arcane-substrate"), amount = 3 } },
+        results = { { type = "item", name = utils.prefix("arcane-substrate"), amount = 3 } },
         main_product = utils.prefix("arcane-substrate")
     },
 })

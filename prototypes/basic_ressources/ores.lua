@@ -6,11 +6,11 @@ data:extend({
         energy_required = 10,
         --enabled = false,
         ingredients = {
-            { type = "item", name = cube_lib.energized_cube_name("", ""), amount = 1 },
+            cube_lib.cube_ingredient(glob.cubes.energized_dense_normal)
         },
         results = {
-            { type = "item", name = "coal",                             amount = 15 },
-            { type = "item", name = cube_lib.dormant_cube_name("", ""), amount = 1 },
+            { type = "item", name = "coal", amount = 15 },
+            cube_lib.cube_product(glob.cubes.energized_dense_normal),
         },
         main_product = "coal",
 
@@ -23,11 +23,11 @@ data:extend({
         energy_required = 10,
         --enabled = false,
         ingredients = {
-            { type = "item", name = cube_lib.energized_cube_name("", ""), amount = 1 },
+            cube_lib.cube_ingredient(glob.cubes.energized_dense_normal)
         },
         results = {
-            { type = "item", name = "iron-plate",                       amount = 10 },
-            { type = "item", name = cube_lib.dormant_cube_name("", ""), amount = 1 },
+            { type = "item", name = "iron-plate", amount = 10 },
+            cube_lib.cube_product(glob.cubes.energized_dense_normal),
         },
         main_product = "iron-plate",
 
@@ -35,16 +35,16 @@ data:extend({
 
     {
         type = "recipe",
-        name = "cube-iron-plate",
+        name = "cube-copper-plate",
         category = "cubic-crafting",
         energy_required = 10,
         --enabled = false,
         ingredients = {
-            { type = "item", name = cube_lib.energized_cube_name("", ""), amount = 1 },
+            cube_lib.cube_ingredient(glob.cubes.energized_dense_normal)
         },
         results = {
-            { type = "item", name = "copper-plate",                     amount = 3 },
-            { type = "item", name = cube_lib.dormant_cube_name("", ""), amount = 1 },
+            { type = "item", name = "copper-plate", amount = 3 },
+            cube_lib.cube_product(glob.cubes.energized_dense_normal),
         },
         main_product = "copper-plate",
 

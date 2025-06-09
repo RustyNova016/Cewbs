@@ -24,7 +24,7 @@ PlanetsLib:extend(
           type = "sprite",
           filename = utils.icon("test"),
           size = 64,
-          scale = 5,
+          scale = 1,
         },
       },
       gravity_pull = 10,

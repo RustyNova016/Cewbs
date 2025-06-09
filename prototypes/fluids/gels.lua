@@ -13,18 +13,19 @@ data:extend({
 
     {
         type = "recipe",
-        name = "cube-matter",
+        name = "udf-gel-e",
         category = "oil-processing",
-        energy_required = 10,
+        energy_required = 3,
         --enabled = false,
         ingredients = {
             { type = "item", name = "cube-jelly", amount = 5 },
-            cube_lib.cube_ingredient("extra", "")
+            cube_lib.cube_ingredient(glob.cubes.dormant_extra_normal)
         },
         results = {
             { type = "fluid", name = "udf-gel-e", amount = 50 },
+            cube_lib.cube_product(glob.cubes.dormant_extra_normal)
         },
-        main_product = "cube-matter",
+        main_product = "udf-gel-e",
 
     }
 })

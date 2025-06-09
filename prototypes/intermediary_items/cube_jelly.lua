@@ -30,8 +30,12 @@ data:extend({
         --enabled = false,
         ingredients = {
             { type = "item", name = "cube-matter", amount = 10 },
+            cube_lib.cube_ingredient(glob.cubes.energized_dense_normal),
         },
-        results = { { type = "item", name = "cube-jelly", amount = 5 } },
+        results = {
+            { type = "item", name = "cube-jelly", amount = 5 },
+            cube_lib.cube_product(glob.cubes.energized_dense_normal)
+        },
         main_product = "cube-jelly"
     },
 })
